@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Perfumaria Árabe Premium</title>
+<meta name="description" content="Perfumes árabes premium — escolha sua fragrância e finalize o pedido pelo WhatsApp.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="container nav">
+    <a class="logo" href="#inicio">PERFUMES <span>ÁRABES</span></a>
+    <nav>
+      <a href="#inicio">Início</a>
+      <a href="#produtos">Perfumes</a>
+      <a href="#sobre">Sobre nós</a>
+    </nav>
+    <button class="cart-btn" id="openCart">🛒 <span>Minha compra</span> <b id="cartCount">0</b></button>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="inicio">
+  <div class="hero-overlay"></div>
+  <div class="container hero-content">
+    <p class="eyebrow">EXCLUSIVIDADE • LUXO • ALTA FIXAÇÃO</p>
+    <h1>Sua vitrine de<br><em>fragrâncias</em> começa aqui.</h1>
+    <p>Perfumes árabes premium com presença, sofisticação e identidade.</p>
+    <a class="btn primary" href="#produtos">Ver perfumes</a>
+  </div>
+</section>
+
+<section class="intro" id="sobre">
+  <div class="container intro-grid">
+    <div>
+      <p class="eyebrow">SOBRE NÓS</p>
+      <h2>Luxo que se vê.<br><em>Presença que se sente.</em></h2>
+    </div>
+    <div class="intro-copy">
+      <p>Uma seleção especial de perfumes árabes com visual marcante, excelente fixação e fragrâncias que despertam personalidade.</p>
+      <div class="features">
+        <div><strong>01</strong><span><b>Seleção premium</b><br>Frascos sofisticados e alta procura.</span></div>
+        <div><strong>02</strong><span><b>Visual profissional</b><br>Produtos apresentados com mais valor percebido.</span></div>
+        <div><strong>03</strong><span><b>Fácil de comprar</b><br>Escolha seus perfumes e envie o pedido pelo WhatsApp.</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="catalog" id="produtos">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow">COLEÇÃO ÁRABE PREMIUM</p>
+        <h2>Encontre sua <em>essência.</em></h2>
+      </div>
+      <div class="filters" id="filters">
+        <button class="active" data-filter="Todos">Todos</button>
+        <button data-filter="Feminino">Femininos</button>
+        <button data-filter="Masculino">Masculinos</button>
+        <button data-filter="Unissex">Unissex</button>
+      </div>
+    </div>
+    <div class="products" id="products"></div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="container footer-grid">
+    <div><div class="logo">PERFUMES <span>ÁRABES</span></div><p>Sofisticação em cada fragrância.</p></div>
+    <div><b>Atendimento</b><p>Pedidos e informações pelo WhatsApp.</p></div>
+  </div>
+</footer>
+
+<div class="modal" id="cartModal" aria-hidden="true">
+  <div class="modal-card">
+    <button class="close" id="closeCart">×</button>
+    <p class="eyebrow">SEU PEDIDO</p>
+    <h2>Minha <em>compra</em></h2>
+    <div id="cartItems"></div>
+    <div class="cart-total"><span>Total</span><strong id="cartTotal">R$ 0,00</strong></div>
+    <div class="checkout-fields">
+      <input id="customerName" placeholder="Seu nome (opcional)">
+      <textarea id="customerNote" rows="2" placeholder="Observação do pedido (opcional)"></textarea>
+    </div>
+    <button class="btn whatsapp" id="whatsappBtn">Finalizar pelo WhatsApp</button>
+    <small class="hint">Antes de publicar, altere o número do WhatsApp no arquivo <b>script.js</b>.</small>
+  </div>
+</div>
+
+<script>
+window.PRODUCTS = [{"id": 1, "name": "Asad", "brand": "Lattafa", "price": 299.9, "category": "Masculino", "description": "Intenso, marcante e sofisticado.", "profile": "Amadeirado • Especiado", "image": "assets/perfumes/perfume-1.png"}, {"id": 2, "name": "Liquid Brun", "brand": "French Avenue", "price": 399.9, "category": "Masculino", "description": "Quente, envolvente e moderno.", "profile": "Intenso • Elegante", "image": "assets/perfumes/perfume-2.png"}, {"id": 3, "name": "Fakhar Gold", "brand": "Lattafa", "price": 299.9, "category": "Masculino", "description": "Luxuoso, brilhante e envolvente.", "profile": "Luxuoso • Sofisticado", "image": "assets/perfumes/perfume-3.png"}, {"id": 4, "name": "Pacific Aura", "brand": "Rayhaan", "price": 249.9, "category": "Masculino", "description": "Fresco, vibrante e moderno.", "profile": "Oceânico • Aromático", "image": "assets/perfumes/perfume-4.png"}, {"id": 5, "name": "Asad Bourbon", "brand": "Lattafa", "price": 349.9, "category": "Masculino", "description": "Intenso, quente e sofisticado.", "profile": "Quente • Especiado", "image": "assets/perfumes/perfume-5.png"}, {"id": 6, "name": "Special Oud", "brand": "Al Wataniah", "price": 229.9, "category": "Masculino", "description": "Intenso, oriental e marcante.", "profile": "Oud • Âmbar", "image": "assets/perfumes/perfume-6.png"}, {"id": 7, "name": "Sultan Al Lail", "brand": "Al Wataniah", "price": 199.9, "category": "Masculino", "description": "Intenso, envolvente e misterioso.", "profile": "Oriental • Elegante", "image": "assets/perfumes/perfume-7.png"}, {"id": 8, "name": "Club de Nuit Milestone", "brand": "Armaf", "price": 279.9, "category": "Masculino", "description": "Refinado, fresco e versátil.", "profile": "Fresco • Elegante", "image": "assets/perfumes/perfume-8.png"}, {"id": 9, "name": "Khamrah Qahwa", "brand": "Lattafa", "price": 299.9, "category": "Unissex", "description": "Quente, gourmand e memorável.", "profile": "Gourmand • Ambarado", "image": "assets/perfumes/khamrah-qahwa.jpg"}, {"id": 10, "name": "9PM", "brand": "Afnan", "price": 249.9, "category": "Masculino", "description": "Doce, ambarado e sedutor.", "profile": "Doce • Sedutor", "image": "assets/perfumes/perfume-10.png"}, {"id": 11, "name": "9AM Dive", "brand": "Afnan", "price": 249.9, "category": "Masculino", "description": "Moderno, fresco e marcante.", "profile": "Fresco • Aromático", "image": "assets/perfumes/perfume-11.png"}, {"id": 12, "name": "Fakhar Platina", "brand": "Lattafa", "price": 299.9, "category": "Masculino", "description": "Refinado, elegante e contemporâneo.", "profile": "Versátil • Sofisticado", "image": "assets/perfumes/perfume-12.png"}, {"id": 13, "name": "Voux Zingy", "brand": "Emir", "price": 249.9, "category": "Unissex", "description": "Vibrante, fresco e cheio de energia.", "profile": "Leve • Marcante", "image": "assets/perfumes/perfume-13.png"}, {"id": 14, "name": "Self", "brand": "Stella Dustin", "price": 149.9, "category": "Unissex", "description": "Moderno, limpo e elegante.", "profile": "Fresco • Contemporâneo", "image": "assets/perfumes/perfume-14.png"}, {"id": 15, "name": "Bade’e Al Oud For Glory", "brand": "Lattafa", "price": 279.9, "category": "Unissex", "description": "Intenso, marcante e sofisticado.", "profile": "Oud • Envolvente", "image": "assets/perfumes/perfume-15.png"}, {"id": 16, "name": "Bade’e Al Oud Amethyst", "brand": "Lattafa", "price": 279.9, "category": "Unissex", "description": "Intenso, misterioso e floral ambarado.", "profile": "Floral • Oriental", "image": "assets/perfumes/perfume-16.png"}, {"id": 17, "name": "Emeer", "brand": "Lattafa", "price": 279.9, "category": "Unissex", "description": "Nobre, luminoso e sofisticado.", "profile": "Amadeirado • Oriental", "image": "assets/perfumes/perfume-17.png"}, {"id": 18, "name": "Yara", "brand": "Lattafa", "price": 349.9, "category": "Feminino", "description": "Delicado, cremoso e envolvente.", "profile": "Floral • Frutado • Gourmand", "image": "assets/perfumes/perfume-18.png"}, {"id": 19, "name": "Yara Elixir", "brand": "Lattafa", "price": 349.9, "category": "Feminino", "description": "Doce, feminino, sofisticado e marcante.", "profile": "Oriental • Gourmand", "image": "assets/perfumes/perfume-19.png"}, {"id": 20, "name": "Club de Nuit Maleka", "brand": "Armaf", "price": 349.9, "category": "Feminino", "description": "Feminino, intenso e sofisticado.", "profile": "Frutado • Floral", "image": "assets/perfumes/perfume-20.png"}, {"id": 21, "name": "Sabah Al Ward", "brand": "Al Wataniah", "price": 299.9, "category": "Feminino", "description": "Oriental floral com toque doce.", "profile": "Floral • Oriental", "image": "assets/perfumes/perfume-21.png"}, {"id": 22, "name": "Sabah Sugar", "brand": "Al Wataniah", "price": 299.9, "category": "Feminino", "description": "Doce, romântico e aconchegante.", "profile": "Frutado • Baunilha", "image": "assets/perfumes/perfume-22.png"}];
+</script>
+<script src="script.js"></script>
+</body>
+</html>
