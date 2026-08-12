@@ -8,3 +8,24 @@
 footer{border-top:1px solid var(--line);padding:45px 0;color:#8e8981}.footer-grid{display:flex;justify-content:space-between}.footer-grid p{font-size:11px;line-height:1.7}.footer-grid b{color:#ddd;font-size:12px}
 .modal{position:fixed;inset:0;background:rgba(0,0,0,.78);z-index:50;display:none;align-items:center;justify-content:center;padding:20px}.modal.open{display:flex}.modal-card{width:min(560px,100%);max-height:90vh;overflow:auto;background:#151515;border:1px solid #373229;padding:35px;position:relative}.close{position:absolute;right:17px;top:12px;border:0;background:none;color:#fff;font-size:30px;cursor:pointer}.modal-card h2{font-size:48px;margin-bottom:25px}.cart-row{display:grid;grid-template-columns:1fr auto auto;gap:12px;align-items:center;border-bottom:1px solid var(--line);padding:14px 0}.cart-row h4{margin:0;font:600 22px "Cormorant Garamond",serif}.cart-row small{color:#8e8981}.qty{display:flex;align-items:center;gap:7px}.qty button{width:26px;height:26px;border:1px solid #454038;background:#222;color:#fff;border-radius:50%;cursor:pointer}.remove{background:none;border:0;color:#8d877e;cursor:pointer}.cart-total{display:flex;justify-content:space-between;font-size:17px;padding:20px 0}.cart-total strong{color:var(--gold)}.checkout-fields{display:grid;gap:10px;margin-bottom:12px}.checkout-fields input,.checkout-fields textarea{width:100%;background:#0d0d0d;border:1px solid #35312b;color:#fff;padding:13px;font:inherit;resize:vertical}.whatsapp{width:100%;background:#25d366;color:#06160b}.hint{display:block;color:#777;margin-top:10px;line-height:1.5}
 @media(max-width:900px){nav{display:none}.products{grid-template-columns:repeat(2,1fr)}.intro-grid{grid-template-columns:1fr;gap:35px}.section-head{align-items:start;flex-direction:column}}@media(max-width:520px){.nav{height:65px}.cart-btn span{display:none}.hero{min-height:580px}.hero h1{font-size:56px}.products{grid-template-columns:1fr 1fr;gap:10px}.product-image{height:220px}.product-body{padding:14px}.product h3{font-size:22px}.section-head h2{font-size:46px}.intro h2{font-size:48px}.modal-card{padding:25px 18px}}
+.hero-logo {
+  position: absolute;
+  z-index: 3;
+  right: 8%;
+  top: 50%;
+  width: 380px;
+  height: 520px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(-50%) rotate(10deg);
+  pointer-events: none;
+}
+
+.hero-logo img {
+  width: 75%;
+  max-height: 75%;
+  object-fit: contain;
+  transform: rotate(-10deg);
+  display: block;
+}
