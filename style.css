@@ -148,21 +148,18 @@ nav a:hover {
 
 /* Moldura decorativa do lado direito */
 
-.hero {
-  position: relative;
-}
-
-.hero:after {
+.hero::after {
   content: "";
   position: absolute;
   right: 8%;
   top: 8%;
   width: 380px;
   height: 520px;
-  border: 1px solid rgba(201, 169, 106, .28);
+  border: 1px solid rgba(201, 169, 106, 0.28);
   transform: rotate(10deg);
   border-radius: 190px 190px 80px 80px;
 }
+
 /* Logo dentro da moldura */
 
 .hero-logo {
@@ -760,25 +757,4 @@ footer {
   .modal-card {
     padding: 25px 18px;
   }
-}
-.hero-logo {
-  position: absolute;
-  z-index: 3;
-  right: 8%;
-  top: 50%;
-  width: 380px;
-  height: 520px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transform: translateY(-50%) rotate(10deg);
-  pointer-events: none;
-}
-
-.hero-logo img {
-  width: 75%;
-  max-height: 75%;
-  object-fit: contain;
-  transform: rotate(-10deg);
-  display: block;
 }
